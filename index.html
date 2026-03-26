@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNCCD Country Resources — FAO GEF-8</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-dark:   #0d1a0d;
+    --green-mid: #2d4a2d;
+    --cream:     #f5f0e8;
+    --gold:      #c9a84c;
+    --muted:     rgba(245,240,232,0.45);
+  }
+
+  html, body {
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: var(--bg-dark);
+    color: var(--cream);
+  }
+
+  /* ── Background ── */
+  .bg {
+    position: fixed;
+    inset: 0;
+    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=85');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.25) saturate(0.6);
+    z-index: 0;
+  }
+  .bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(8,16,8,0.4) 0%,
+      rgba(8,16,8,0.7) 60%,
+      rgba(8,16,8,0.92) 100%
+    );
+    z-index: 1;
+  }
+
+  /* ── Layout ── */
+  .container {
+    position: relative;
+    z-index: 2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1.5rem 5rem;
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    animation: fadeDown 0.9s ease both;
+  }
+
+  .top-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    color: var(--cream);
+    margin-bottom: 0.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.82rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.4rem;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto;
+    opacity: 0.6;
+  }
+
+  /* ── Grid ── */
+  .grid {
+    width: 100%;
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .country-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1.6rem 1rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--cream);
+    backdrop-filter: blur(6px);
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+    animation: fadeUp 0.7s ease both;
+    text-align: center;
+  }
+
+  .country-card:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+
+  .country-flag {
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+
+  .country-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+  }
+
+  .country-sub {
+    font-size: 0.68rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .country-arrow {
+    font-size: 0.75rem;
+    color: rgba(201,168,76,0.4);
+    transition: color 0.2s;
+    margin-top: 0.2rem;
+  }
+  .country-card:hover .country-arrow {
+    color: var(--gold);
+  }
+
+  /* coming soon card */
+  .country-card.soon {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
+  .soon-badge {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  /* stagger */
+  .country-card:nth-child(1) { animation-delay: 0.1s; }
+  .country-card:nth-child(2) { animation-delay: 0.2s; }
+  .country-card:nth-child(3) { animation-delay: 0.3s; }
+  .country-card:nth-child(4) { animation-delay: 0.4s; }
+  .country-card:nth-child(5) { animation-delay: 0.5s; }
+  .country-card:nth-child(6) { animation-delay: 0.6s; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 3.5rem;
+    text-align: center;
+    animation: fadeUp 0.8s 0.7s ease both;
+  }
+  .footer p {
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    line-height: 2;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+<div class="bg-overlay"></div>
+
+<div class="container">
+
+  <header class="header">
+    <p class="top-label">FAO – GEF-8 Enabling Activity</p>
+    <h1>UNCCD Country Resources</h1>
+    <p class="subtitle">SO1 &amp; SDG 15.3.1 — Reporting Support</p>
+    <div class="divider"></div>
+  </header>
+
+  <div class="grid">
+
+    <!-- ── Active countries ── -->
+    <a class="country-card" href="serbia.html">
+      <div class="country-flag">🇷🇸</div>
+      <div class="country-name">Serbia</div>
+      <div class="country-sub">SO1 &amp; SDG 15.3.1</div>
+      <div class="country-arrow">→ View resources</div>
+    </a>
+
+    <!-- ── Add new countries below following the same pattern ── -->
+    <!-- Example:
+    <a class="country-card" href="mongolia.html">
+      <div class="country-flag">🇲🇳</div>
+      <div class="country-name">Mongolia</div>
+      <div class="country-sub">SO1 &amp; SDG 15.3.1</div>
+      <div class="country-arrow">→ View resources</div>
+    </a>
+    -->
+
+    <!-- ── Coming soon placeholders (remove as pages go live) ── -->
+    <div class="country-card soon">
+      <div class="country-flag">🌍</div>
+      <div class="country-name">More countries</div>
+      <div class="soon-badge">Coming soon</div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <p>Food and Agriculture Organization of the United Nations</p>
+    <p>United Nations Convention to Combat Desertification</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
