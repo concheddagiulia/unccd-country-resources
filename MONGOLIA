@@ -29,7 +29,7 @@
   .bg {
     position: fixed;
     inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=85');
+    background-image: url('mongolia.webp');
     background-size: cover;
     background-position: center 55%;
     filter: brightness(0.55) saturate(1.1);
