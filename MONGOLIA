@@ -244,15 +244,15 @@
 
   <header class="header">
     <div class="flag-line">
-      <span class="flag-stripe red"></span>
-      <span class="flag-stripe blue"></span>
-      <span class="flag-stripe white"></span>
-      <span class="flag-label">Serbia</span>
-      <span class="flag-stripe white"></span>
-      <span class="flag-stripe blue"></span>
-      <span class="flag-stripe red"></span>
+     <span class="flag-stripe red"></span>
+	 <span class="flag-stripe blue"></span>
+	<span class="flag-stripe red"></span>
+	<span class="flag-label">Mongolia</span>
+	<span class="flag-stripe red"></span>
+	<span class="flag-stripe blue"></span>
+	<span class="flag-stripe red"></span>
     </div>
-    <h1>Serbia Reporting to UNCCD</h1>
+    <h1>Mongolia Reporting to UNCCD</h1>
     <div class="divider"></div>
     <p class="subtitle">Available Resources for SO1 &amp; SDG 15.3.1</p>
   </header>
