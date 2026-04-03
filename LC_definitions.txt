@@ -1,0 +1,274 @@
+[
+    {
+        "lcc": {
+            "code": 10,
+            "color": "#0053c4",
+            "description": null,
+            "name_long": "Water",
+            "name_short": "Water"
+        },
+        "parent": {
+            "code": 7,
+            "color": "#0053C4",
+            "description": null,
+            "name_long": "Water body",
+            "name_short": "Water body"
+        }
+    },
+    {
+        "lcc": {
+            "code": 20,
+            "color": "#e60017",
+            "description": null,
+            "name_long": "Urban",
+            "name_short": "Urban"
+        },
+        "parent": {
+            "code": 5,
+            "color": "#E60017",
+            "description": null,
+            "name_long": "Artificial",
+            "name_short": "Artificial"
+        }
+    },
+    {
+        "lcc": {
+            "code": 30,
+            "color": "#8d2c06",
+            "description": null,
+            "name_long": "Bare land",
+            "name_short": "Bare land"
+        },
+        "parent": {
+            "code": 6,
+            "color": "#FFF3D7",
+            "description": null,
+            "name_long": "Other land",
+            "name_short": "Bare land"
+        }
+    },
+    {
+        "lcc": {
+            "code": 31,
+            "color": "#6b5147",
+            "description": null,
+            "name_long": "Rock",
+            "name_short": "Rock"
+        },
+        "parent": {
+            "code": 6,
+            "color": "#FFF3D7",
+            "description": null,
+            "name_long": "Other land",
+            "name_short": "Bare land"
+        }
+    },
+    {
+        "lcc": {
+            "code": 32,
+            "color": "#f2ea0a",
+            "description": null,
+            "name_long": "Sand",
+            "name_short": "Sand"
+        },
+        "parent": {
+            "code": 6,
+            "color": "#FFF3D7",
+            "description": null,
+            "name_long": "Other land",
+            "name_short": "Bare land"
+        }
+    },
+    {
+        "lcc": {
+            "code": 40,
+            "color": "#8fe142",
+            "description": null,
+            "name_long": "Forest",
+            "name_short": "Forest"
+        },
+        "parent": {
+            "code": 1,
+            "color": "#787F1B",
+            "description": null,
+            "name_long": "Tree-covered",
+            "name_short": "Tree-covered"
+        }
+    },
+    {
+        "lcc": {
+            "code": 41,
+            "color": "#619d26",
+            "description": null,
+            "name_long": "Evergreen",
+            "name_short": "Evergreen"
+        },
+        "parent": {
+            "code": 1,
+            "color": "#787F1B",
+            "description": null,
+            "name_long": "Tree-covered",
+            "name_short": "Tree-covered"
+        }
+    },
+    {
+        "lcc": {
+            "code": 42,
+            "color": "#7eed0f",
+            "description": null,
+            "name_long": "Mixed",
+            "name_short": "Mixed"
+        },
+        "parent": {
+            "code": 1,
+            "color": "#787F1B",
+            "description": null,
+            "name_long": "Tree-covered",
+            "name_short": "Tree-covered"
+        }
+    },
+    {
+        "lcc": {
+            "code": 50,
+            "color": "#e19f42",
+            "description": null,
+            "name_long": "Desert steppe",
+            "name_short": "Desert steppe"
+        },
+        "parent": {
+            "code": 6,
+            "color": "#FFF3D7",
+            "description": null,
+            "name_long": "Other land",
+            "name_short": "Bare land"
+        }
+    },
+    {
+        "lcc": {
+            "code": 60,
+            "color": "#eec922",
+            "description": null,
+            "name_long": "Dry steppe",
+            "name_short": "Dry steppe"
+        },
+        "parent": {
+            "code": 2,
+            "color": "#FFAC42",
+            "description": null,
+            "name_long": "Grassland",
+            "name_short": "Grassland"
+        }
+    },
+    {
+        "lcc": {
+            "code": 61,
+            "color": "#d1f219",
+            "description": null,
+            "name_long": "Meadow steppe",
+            "name_short": "Meadow steppe"
+        },
+        "parent": {
+            "code": 2,
+            "color": "#FFAC42",
+            "description": null,
+            "name_long": "Grassland",
+            "name_short": "Grassland"
+        }
+    },
+    {
+        "lcc": {
+            "code": 63,
+            "color": "#f0e112",
+            "description": null,
+            "name_long": "Steppe",
+            "name_short": "Steppe"
+        },
+        "parent": {
+            "code": 2,
+            "color": "#FFAC42",
+            "description": null,
+            "name_long": "Grassland",
+            "name_short": "Grassland"
+        }
+    },
+    {
+        "lcc": {
+            "code": 70,
+            "color": "#a68d72",
+            "description": null,
+            "name_long": "Desert",
+            "name_short": "Desert"
+        },
+        "parent": {
+            "code": 6,
+            "color": "#FFF3D7",
+            "description": null,
+            "name_long": "Other land",
+            "name_short": "Bare land"
+        }
+    },
+    {
+        "lcc": {
+            "code": 80,
+            "color": "#15ebcb",
+            "description": null,
+            "name_long": "Wetland",
+            "name_short": "Wetland"
+        },
+        "parent": {
+            "code": 4,
+            "color": "#00DB84",
+            "description": null,
+            "name_long": "Wetland",
+            "name_short": "Wetland"
+        }
+    },
+    {
+        "lcc": {
+            "code": 90,
+            "color": "#d366a9",
+            "description": null,
+            "name_long": "Cropland",
+            "name_short": "Cropland"
+        },
+        "parent": {
+            "code": 3,
+            "color": "#FFFB6E",
+            "description": null,
+            "name_long": "Cropland",
+            "name_short": "Cropland"
+        }
+    },
+    {
+        "lcc": {
+            "code": 11,
+            "color": "#efe0e9",
+            "description": null,
+            "name_long": "Glacier",
+            "name_short": "Glacier"
+        },
+        "parent": {
+            "code": 7,
+            "color": "#0053C4",
+            "description": null,
+            "name_long": "Water body",
+            "name_short": "Water body"
+        }
+    },
+    {
+        "lcc": {
+            "code": 1,
+            "color": "#090f03",
+            "description": null,
+            "name_long": "No data",
+            "name_short": "No data"
+        },
+        "parent": {
+            "code": -32768,
+            "color": "#000000",
+            "description": null,
+            "name_long": "No data",
+            "name_short": "No data"
+        }
+    }
+]
